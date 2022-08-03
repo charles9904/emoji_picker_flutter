@@ -1,5 +1,4 @@
-import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
-import 'package:emoji_picker_flutter/src/category_emoji.dart';
+import 'package:emoji_picker/emoji_picker.dart';
 
 /// State that holds current emoji data
 class EmojiViewState {

@@ -1,10 +1,10 @@
-import 'package:emoji_picker_flutter/src/category_emoji.dart';
-import 'package:emoji_picker_flutter/src/config.dart';
-import 'package:emoji_picker_flutter/src/default_emoji_picker_view.dart';
-import 'package:emoji_picker_flutter/src/emoji.dart';
-import 'package:emoji_picker_flutter/src/emoji_picker_internal_utils.dart';
-import 'package:emoji_picker_flutter/src/emoji_view_state.dart';
-import 'package:emoji_picker_flutter/src/recent_emoji.dart';
+import 'package:emoji_picker/src/category_emoji.dart';
+import 'package:emoji_picker/src/config.dart';
+import 'package:emoji_picker/src/default_emoji_picker_view.dart';
+import 'package:emoji_picker/src/emoji.dart';
+import 'package:emoji_picker/src/emoji_picker_internal_utils.dart';
+import 'package:emoji_picker/src/emoji_view_state.dart';
+import 'package:emoji_picker/src/recent_emoji.dart';
 import 'package:flutter/material.dart';
 
 /// All the possible categories that [Emoji] can be put into

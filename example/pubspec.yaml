@@ -10,11 +10,11 @@ dependencies:
   flutter:
     sdk: flutter
 
-  emoji_picker_flutter:
+  emoji_picker:
     path: ../
 
 dependency_overrides:
-  emoji_picker_flutter:
+  emoji_picker:
     path: ../
 
 flutter:
