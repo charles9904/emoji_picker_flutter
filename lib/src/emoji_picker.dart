@@ -103,10 +103,14 @@ class EmojiPicker extends StatefulWidget {
     this.onBackspacePressed,
     this.config = const Config(),
     this.customWidget,
+    this.loadingWidget,
   }) : super(key: key);
 
   /// Custom widget
   final EmojiViewBuilder? customWidget;
+
+  /// Custom loading widget
+  final Widget? loadingWidget;
 
   /// If you provide the [TextEditingController] that is linked to a
   /// [TextField] this widget handles inserting and deleting for you
@@ -176,11 +180,12 @@ class EmojiPickerState extends State<EmojiPicker> {
       );
 
       // Show loading indicator
-      return Container(
-        alignment: Alignment.center,
-        color: widget.config.bgColor,
-        child: const CircularProgressIndicator(),
-      );
+      return widget.loadingWidget ??
+          Container(
+            alignment: Alignment.center,
+            color: widget.config.bgColor,
+            child: const CircularProgressIndicator(),
+          );
     }
     if (widget.config.showRecentsTab) {
       _categoryEmoji[0].emoji = _recentEmoji.map((e) => e.emoji).toList();
@@ -287,8 +292,7 @@ class EmojiPickerState extends State<EmojiPicker> {
             emojis.entries.map((emoji) {
               var _emoji = Emoji(emoji.key, emoji.value);
               // Emoji with skin tone are only in SMILEY & ACTIVITIES category
-              if (category == Category.SMILEYS ||
-                  category == Category.ACTIVITIES) {
+              if (category == Category.SMILEYS || category == Category.ACTIVITIES) {
                 return _updateSkinToneSupport(_emoji);
               } else
                 return _emoji;

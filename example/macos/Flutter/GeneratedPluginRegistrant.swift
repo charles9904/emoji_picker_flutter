@@ -5,7 +5,7 @@
 import FlutterMacOS
 import Foundation
 
-import emoji_picker_flutter
+import emoji_picker
 import shared_preferences_macos
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
